@@ -20,6 +20,7 @@ import {
   Tooltip,
   Legend,
 } from 'recharts';
+import { Analytics } from '@vercel/analytics/react';
 
 type Option = { label: string; score: number };
 type Question = { id: string; title: string; options?: Option[]; type?: 'currency'; placeholder?: string; showChart?: boolean };
@@ -630,6 +631,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
